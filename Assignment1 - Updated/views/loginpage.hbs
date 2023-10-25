@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Login Page</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <article class="container">
+        <section><img src="logo.jpg" alt="Bank logo" class="logo"></section>
+        <section class="login-form-container">
+            <h1>Login</h1>
+            <form action="/login" method="post">
+                {{#if data}}
+                <p>
+                    <label for="username"> Username </label><br />
+                    <input class="input-field" type="email" placeholder="Username" name="username" id="username"
+                        value={{data.username}} required>
+                </p>
+                <p>
+                    <label for="password"> Password </label><br />
+                    <input class="input-field" type="password" placeholder="Password" name="password" id="password"
+                        value={{data.password}} required>
+                </p>
+                <label> {{data.message}} </label>
+                {{else}}
+                <p>
+                    <label for="username"> Username </label><br />
+                    <input class="input-field" type="email" placeholder="Username" name="username" id="username"
+                        required>
+                </p>
+                <p>
+                    <label for="password"> Password </label><br />
+                    <input class="input-field" type="password" placeholder="Password" name="password" id="password"
+                        required>
+                </p>
+                {{/if}}
+                <p><button>Submit</button></p>
+            </form>
+            <p><button>Register</button></p>
+            </form>
+        </section>
+    </article>
+</body>
+
+</html>

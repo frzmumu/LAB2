@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <script src="client_script.js" type="text/javascript"></script>
+  <title>Birdview Bank</title>
+</head>
+
+<body>
+  <article class="container">
+    <section><img src="logo.jpg" alt="Bank logo" class="logo" onclick="alert('eee')"></section>
+    <section class="banking-page-body">
+      <p class="user-name-container" onclick="logout()">
+        <label class="lbl-log-out" onclick=>Log out</label>
+        <label class="lbl-user-name">{{data}}</label>
+      </p>
+      <p><b>Welcome to Birdview Bank</b> <br />We provide solutions for your daily banking!</p>
+    </section>
+    <section class="banking-page-form-container">
+      <form action="/" method="post" id="accountform">
+        <p>
+          <label for="accountnumber">Account Number</label><br />
+          <input class="input-field" type="text" placeholder="Account Number" name="accountnumber" id="accountnumber"
+            required>
+        </p>
+        <p>
+          <label for="radiobutton1">Balance</label><input type="radio" name="radiobutton" id="radiobutton1">
+          <label for="radiobutton2">Deposit</label><input type="radio" name="radiobutton" id="radiobutton2">
+        </p>
+        <button>Submit</button>
+      </form>
+    </section>
+  </article>
+
+</body>
+
+</html>
